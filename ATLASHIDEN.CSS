@@ -926,23 +926,17 @@ body::before{
 
 
 
-
-
-/* === Compass: stacked PNGs, outside labels, small === */
-.compass{
-  /* knobs */
-  --size: 138px;             /* overall size — make smaller/bigger here */
-  --labelOffset: 16px;       /* how far letters sit OUTSIDE the circle */
-  --bx: 0px; --by: 0px;      /* micro-nudges (back)  if canvases aren't identical */
-  --fx: 0px; --fy: 0px;      /* micro-nudges (front) */
-
+.compass {
   position: fixed;
-  top: 1.75rem;
-  right: 1.75rem;
-  width: var(--size);
-  aspect-ratio: 1 / 1;
-  z-index: 9999;
+  top: 1rem;         /* moves it down/up */
+  right: 1.5rem;     /* nudges it left (bigger number = further left) */
+  width: 120px;      /* smaller width overall */
+  z-index: 10;       /* stays on top but doesn’t block scroll */
 }
+
+
+
+  
 .compass-inner{ position: relative; width:100%; height:100%; }
 
 .compass-back, .compass-front{
@@ -961,7 +955,11 @@ body::before{
   color: var(--ink);
   user-select:none; cursor:pointer;
   line-height: 1;
+  transform: translateX(-4px); /* nudges letters a bit left */
+  font-size: 0.85rem;          /* makes N, S, E, W slightly smaller */
 }
+
+
 .north-label { top: calc(-1 * var(--labelOffset)); left: 50%; transform: translateX(-50%); }
 .south-label { bottom: calc(-1 * var(--labelOffset)); left: 50%; transform: translateX(-50%); }
 .east-label  { right: calc(-1 * var(--labelOffset)); top: 50%; transform: translateY(-50%); }
