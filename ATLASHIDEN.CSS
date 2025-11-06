@@ -978,10 +978,10 @@ body{
 
 /* Letter positions (bring N & W closer in) */
 :root{
-  --offN: 12px;   /* inward a bit */
+  --offN: 5px;   /* inward a bit */
   --offS: 14px;
   --offE: 14px;
-  --offW: 12px;   /* inward a bit */
+  --offW: 5px;   /* inward a bit */
 }
 .compass span{
   position:absolute;
