@@ -960,3 +960,46 @@ body{
     font-size: 0.65rem; /* smaller labels */
   }
 }
+
+/* === COMPASS — single source of truth === */
+.compass{
+  position: fixed;
+  top: 0.9rem;
+  right: 4.6rem;        /* bigger number = more to the LEFT */
+  width: 118px;         /* desktop size */
+  aspect-ratio: 1 / 1;
+  z-index: 50;
+}
+.compass-inner{ position: relative; width:100%; height:100%; overflow: visible; }
+.compass-back, .compass-front{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit: contain; pointer-events:none;
+}
+
+/* Letter positions (bring N & W closer in) */
+:root{
+  --offN: 12px;   /* inward a bit */
+  --offS: 14px;
+  --offE: 14px;
+  --offW: 12px;   /* inward a bit */
+}
+.compass span{
+  position:absolute;
+  font-family: var(--display);
+  font-style: italic; font-weight: 400;
+  color: var(--ink); line-height:1; user-select:none;
+}
+.north-label{ top:  calc(-1 * var(--offN)); left:50%; transform:translateX(-50%); }
+.south-label{ bottom:calc(-1 * var(--offS)); left:50%; transform:translateX(-50%); }
+.east-label { right: calc(-1 * var(--offE));  top:50%;  transform:translateY(-50%); }
+.west-label { left:  calc(-1 * var(--offW));  top:50%;  transform:translateY(-50%); }
+
+/* Mobile tweaks */
+@media (max-width: 768px){
+  .compass{
+    right: 3.2rem;   /* push left on phones so it clears the scrollbar */
+    top:   0.6rem;
+    width: 92px;     /* smaller on mobile */
+  }
+  .compass span{ font-size: .62rem; }
+}
