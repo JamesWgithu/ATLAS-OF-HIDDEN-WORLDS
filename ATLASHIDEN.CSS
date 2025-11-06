@@ -1003,3 +1003,83 @@ body{
   }
   .compass span{ font-size: .62rem; }
 }
+
+/* === FINAL COMPASS FIX === */
+.compass {
+  position: fixed;
+  top: 1.2rem;
+  right: 4.8rem;      /* slightly further left */
+  width: 115px;
+  aspect-ratio: 1 / 1;
+  z-index: 50;
+}
+
+.compass-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.compass-back, .compass-front {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Adjust letter offsets */
+:root {
+  --offN: 7px;   /* slightly closer than before */
+  --offS: 14px;  /* leave as-is */
+  --offE: 14px;  /* leave as-is */
+  --offW: 7px;   /* slightly closer */
+}
+
+.compass span {
+  position: absolute;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+  user-select: none;
+}
+
+.north-label {
+  top: calc(-1 * var(--offN));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.south-label {
+  bottom: calc(-1 * var(--offS));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.east-label {
+  right: calc(-1 * var(--offE));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.west-label {
+  left: calc(-1 * var(--offW));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+  .compass {
+    right: 3.4rem;    /* pushes a bit left */
+    width: 90px;
+    top: 0.8rem;
+  }
+  .compass span {
+    font-size: 0.65rem;
+  }
+}
