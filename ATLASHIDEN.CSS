@@ -1001,3 +1001,14 @@ body::before{
   position:absolute; left:  calc(-1 * var(--labelOffset)); top:50%;
   transform: translateY(-50%); margin-left: var(--wX); margin-top: var(--wY);
 }
+
+
+/* kill the vignette overlay on the break/hero */
+.break-full::after { content: none !important; background: none !important; }
+
+/* simplify page background — keep micro-dots only */
+body{
+  background-color: var(--paper) !important;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,.028) 1px, transparent 0) !important;
+  background-size: 3px 3px !important;
+}
