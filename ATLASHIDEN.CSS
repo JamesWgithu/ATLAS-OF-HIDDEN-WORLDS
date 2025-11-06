@@ -857,3 +857,126 @@ body::before{
   position:absolute; left:  calc(-1 * var(--labelOffset)); top:50%;
   transform: translateY(-50%); margin-left: var(--wX); margin-top: var(--wY);
 }
+
+
+
+
+
+
+
+
+/* FIXED COMPASS (final) */
+.compass {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 160px;
+  height: 160px;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.compass-inner { position: relative; width: 100%; height: 100%; }
+
+.compass-rose-svg {
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  transform: rotate(-15deg);
+}
+
+.compass span {
+  position: absolute;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Label placement */
+.north-label { top: -10px; left: 50%; transform: translateX(-50%); }
+.south-label { bottom: -10px; left: 50%; transform: translateX(-50%); }
+.east-label  { right: -8px; top: 50%; transform: translateY(-50%); }
+.west-label  { left: -8px; top: 50%; transform: translateY(-50%); }
+
+.compass span:hover { color: var(--accent); }
+
+
+
+
+
+/* === Compass: stacked PNGs, outside labels, small === */
+.compass{
+  /* knobs */
+  --size: 138px;             /* overall size — make smaller/bigger here */
+  --labelOffset: 16px;       /* how far letters sit OUTSIDE the circle */
+  --bx: 0px; --by: 0px;      /* micro-nudges (back)  if canvases aren't identical */
+  --fx: 0px; --fy: 0px;      /* micro-nudges (front) */
+
+  position: fixed;
+  top: 1.75rem;
+  right: 1.75rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  z-index: 9999;
+}
+.compass-inner{ position: relative; width:100%; height:100%; }
+
+.compass-back, .compass-front{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit: contain; pointer-events:none;
+}
+.compass-back  { z-index:1; transform: translate(var(--bx), var(--by)); opacity:.95; }
+.compass-front { z-index:2; transform: translate(var(--fx), var(--fy));  opacity:.98; }
+
+/* Letters — use your atlas display font and push them OUTSIDE */
+.compass span{
+  position:absolute;
+  font-family: var(--display);
+  font-style: italic; font-weight: 400;
+  color: var(--ink);
+  user-select:none; cursor:pointer;
+  line-height: 1;
+}
+.north-label { top: calc(-1 * var(--labelOffset)); left: 50%; transform: translateX(-50%); }
+.south-label { bottom: calc(-1 * var(--labelOffset)); left: 50%; transform: translateX(-50%); }
+.east-label  { right: calc(-1 * var(--labelOffset)); top: 50%; transform: translateY(-50%); }
+.west-label  { left:  calc(-1 * var(--labelOffset)); top: 50%; transform: translateY(-50%); }
+
+.compass span:hover{ color: var(--accent); }
+
+/* Remove any earlier CSS keyframe spin you may have added */
+.compass.animate .compass-front{ animation: none !important; }
+
+/* === Compass label spacing + micro-nudges === */
+.compass{
+  /* distance of ALL letters from the outer circle */
+  --labelOffset: 20px;        /* try 18–26px to taste */
+
+  /* per-letter micro adjustments (X/Y) */
+  --nX: 0px;  --nY: 0px;
+  --eX: 0px;  --eY: 0px;
+  --sX: 0px;  --sY: 0px;
+  --wX: -8px; --wY: 0px;      /* ⟵ push W further left */
+}
+
+/* keep your existing font rules; just swap in these positions */
+.north-label{
+  position:absolute; top: calc(-1 * var(--labelOffset)); left:50%;
+  transform: translateX(-50%); margin-left: var(--nX); margin-top: var(--nY);
+}
+.south-label{
+  position:absolute; bottom: calc(-1 * var(--labelOffset)); left:50%;
+  transform: translateX(-50%); margin-left: var(--sX); margin-bottom: var(--sY);
+}
+.east-label{
+  position:absolute; right: calc(-1 * var(--labelOffset)); top:50%;
+  transform: translateY(-50%); margin-right: var(--eX); margin-top: var(--eY);
+}
+.west-label{
+  position:absolute; left:  calc(-1 * var(--labelOffset)); top:50%;
+  transform: translateY(-50%); margin-left: var(--wX); margin-top: var(--wY);
+}
