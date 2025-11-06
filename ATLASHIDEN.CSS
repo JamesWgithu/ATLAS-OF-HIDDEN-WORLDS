@@ -13,6 +13,7 @@
     --body: "Source Serif 4", Georgia, serif;
     --meta: "Courier New", monospace;
     
+    
     /* Colors - clean, no parchment */
     --ink: #1a1a1a;
     --paper: #fdfcfa;
@@ -29,6 +30,26 @@
     font-size: 16px;
   }
   
+
+  /* === Custom quill cursor === */
+/* Tweak these hotspot numbers so the quill tip feels precise */
+:root { --cursor-x: 24;  --cursor-y: 16; }  /* pixels from top-left of image */
+
+body {
+  cursor: url('atlaswebsitecursor.png') var(--cursor-x) var(--cursor-y), auto;
+}
+
+/* Keep “pointer” behavior on clickable things */
+a, button, [role="button"], .compass span {
+  cursor: url('atlaswebsitecursor.png') var(--cursor-x) var(--cursor-y), pointer;
+}
+
+/* Let text fields keep the I-beam */
+input, textarea { cursor: text; }
+
+
+
+
   /* Container layouts */
   .container {
     display: flex;
