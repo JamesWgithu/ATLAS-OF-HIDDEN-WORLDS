@@ -1083,3 +1083,30 @@ body{
     font-size: 0.65rem;
   }
 }
+
+/* Son Doong — align image top with text */
+#son-doong { align-items: flex-start; }              /* top-align this flex row */
+#son-doong .width75 figure { margin-top: 0; }        /* remove figure’s default top margin */
+#son-doong .width25 { align-self: flex-start; }      /* belt-and-braces top align */
+
+
+
+/* Lake Toba layout + tighter spacing */
+#lake-toba {
+  display: flex;
+  align-items: flex-start;  /* top-align text and image */
+  gap: 40px;                /* space between columns */
+  margin-top: 0;            /* remove large gap under title */
+}
+
+#lake-toba .width75 {
+  flex: 3;
+}
+
+#lake-toba .width25 {
+  flex: 1;
+}
+
+#lake-toba-case .case__titleblock {
+  margin-bottom: 40px; /* reduce big space under title */
+}

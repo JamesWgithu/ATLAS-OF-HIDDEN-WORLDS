@@ -1,95 +1,83 @@
-/* ===== Atlas of Honest Entrances â€” Final CSS (merged) ===== */
+/* ===== Styles for final Atlas: Hidden Worlds Made Visible ===== */
 
-/* Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
+/* Reset and base styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  background-color: #fdfcfa;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 16px;
+  /* subtle micro-dot paper texture */
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.028) 1px, transparent 0);
+  background-size: 3px 3px;
+}
 
-/* Variables */
-:root{
+/* Typography variables via CSS custom properties */
+:root {
   --display: "antiquarian-scribe", serif;
-  --body: "Source Serif 4", Georgia, serif;
   --meta: "Courier New", monospace;
-
-  --ink:#1a1a1a;
-  --paper:#fdfcfa;
-  --gray:#666;
-  --accent:#8b4513;
-
-  --max: 920px;
-  --gutter: 20px;
-
-  /* custom cursor hotspot if used */
-  --cursor-x: 24;
-  --cursor-y: 16;
-
-  /* Compass letter offsets */
+  --ink: #1a1a1a;
+  --gray: #666;
+  --accent: #8b4513;
+  --max-width: 960px;
+  --gutter: 1rem;
   --offN: 7px;
   --offS: 14px;
   --offE: 14px;
   --offW: 7px;
 }
 
-/* Base */
-html, body { height:100%; }
-body{
-  font-family: var(--body);
-  color: var(--ink);
-  background-color: var(--paper);
-  line-height: 1.6;
-  font-size: 16px;
-
-  /* subtle micro-dot paper */
-  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,.028) 1px, transparent 0);
-  background-size: 3px 3px;
+/* Site header */
+.site-header {
+  padding: 9vh 0 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-
-/* Optional quill cursor (comment out if not desired) */
-/* body, a, button, [role="button"], .compass span{
-  cursor: url('atlaswebsitecursor.png') var(--cursor-x) var(--cursor-y), auto;
-} */
-
-/* Header / title */
-.site-header{ display:flex; flex-direction:column; align-items:center; padding: 9vh 0 6vh; }
-.big-title{
-  width:min(75vw, 1000px);
-  margin:0 auto;
-  text-align:center;
+.big-title {
   font-family: var(--display);
   font-style: italic;
   font-weight: 400;
-  line-height: .9;
-  letter-spacing:.01em;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
   font-size: clamp(48px, 12vw, 140px);
-  color:#111;
-  text-shadow: 0 0 12px rgba(255,255,255,.6);
+  color: #111;
+  text-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
-.big-title .break{ display:block; margin-top:.06em; }
-.author{
+.big-title .break { display: block; margin-top: 0.06em; }
+.author {
   margin-top: 12px;
   font-family: var(--meta);
   font-size: 12px;
   color: var(--gray);
-  letter-spacing:.04em;
+  letter-spacing: 0.04em;
 }
 
-.hero-bleed{ width:100%; margin-bottom: 56px; }
-.hero-bleed img{ width:100%; height:auto; display:block; }
+/* Hero image */
+.hero-bleed img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* Intro */
-.introduction{
+/* Introduction */
+.introduction {
   max-width: 720px;
   margin: 5rem auto 2rem;
   padding: 2rem;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,.15);
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-top: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
-.introduction h2{
+.introduction h2 {
   font-family: var(--display);
   font-size: 2.1rem;
   margin-bottom: 1rem;
-  letter-spacing:.5px;
 }
-.introduction p{
+.introduction p {
   font-size: 1.08rem;
   line-height: 1.7;
   color: var(--gray);
@@ -97,156 +85,268 @@ body{
   margin: 0 auto;
 }
 
-/* Small nav */
-.section-plate nav, nav.section-plate { text-align:center; }
-nav.section-plate a{
+/* Contents nav */
+.section-plate nav, nav.section-plate {
+  text-align: center;
+}
+nav.section-plate a {
   font-family: var(--meta);
   font-size: 12px;
   color: var(--ink);
-  text-decoration:none;
+  text-decoration: none;
   margin: 0 .2rem;
 }
-nav.section-plate a:hover{ text-decoration:underline; }
+nav.section-plate a:hover { text-decoration: underline; }
 
-/* ======================  ATLAS PLATE SYSTEM  ====================== */
-.section-plate{
-  width: min(100%, var(--max));
-  margin: 56px auto;
+/* Plate wrapper */
+.section-plate {
+  width: min(100%, var(--max-width));
+  margin: 4rem auto;
   padding: 0 var(--gutter);
 }
-.plate__head{
-  display:flex; justify-content:space-between; align-items:flex-end;
+.plate__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   gap: var(--gutter);
   margin-bottom: 10px;
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
   padding-bottom: 6px;
 }
-.plate__title{
+.plate__title {
   font-family: var(--display);
-  font-size: clamp(20px, 3.2vw, 36px);
+  font-size: clamp(20px, 2.6vw, 36px);
   line-height: 1.1;
 }
-.plate__meta{
+.plate__meta {
   font-family: var(--meta);
-  font-size: 12px; color: var(--gray);
-  white-space:nowrap; text-align:right;
+  font-size: 12px;
+  color: var(--gray);
+  white-space: nowrap;
+  text-align: right;
 }
-.plate__fig{ margin: 14px 0 8px; }
-.plate__fig img{ width:100%; height:auto; display:block; }
-.plate__cap{
+
+/* Plate content layout */
+.plate__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.plate__text {
+  font-size: 1.05rem;
+  color: var(--gray);
+}
+
+/* Primary and secondary figures */
+.plate__fig {
+  margin: 0 auto;
+  /* Limit the width to keep images smaller. Adjusted from 80% to 65% for a more modest scale similar to the screenshot examples. */
+  max-width: 65%;
+}
+.plate__fig img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.plate__cap {
   font-family: var(--meta);
-  font-size: 12px; color: var(--gray);
+  font-size: 12px;
+  color: var(--gray);
   margin-top: 4px;
 }
-.fig-no{ font-weight:700; color: var(--ink); }
+.fig-no { font-weight: bold; color: var(--ink); }
 
-/* Notes */
-.plate__notes{
-  display:grid; grid-template-columns: 140px 1fr;
+/* Secondary grid for multiple figures */
+.secondary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+.secondary-item {
+  flex: 1 1 calc(50% - 0.8rem);
+}
+.secondary-item.wide {
+  flex: 1 1 100%;
+}
+.secondary-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.secondary-item figcaption {
+  font-family: var(--meta);
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+/* Data table styles */
+.data-table {
+  margin-top: 1rem;
+  font-family: var(--meta);
+  font-size: 12px;
+}
+.data-table h4 {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-family: var(--meta);
+  color: var(--ink);
+}
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.data-table th,
+.data-table td {
+  padding: 4px 6px;
+  border: 1px solid rgba(0,0,0,0.15);
+  text-align: center;
+}
+.data-table thead {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Notes and marginalia */
+.plate__notes {
+  display: grid;
+  grid-template-columns: 140px 1fr;
   gap: 10px var(--gutter);
-  margin-top: 10px;
-  border-top:1px solid rgba(0,0,0,.12);
-  padding-top:10px;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding-top: 10px;
 }
-.note-label{
+.note-label {
   font-family: var(--meta);
-  font-size: 11px; letter-spacing:.02em; color: var(--gray);
-  text-transform:uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--gray);
+  text-transform: uppercase;
 }
-.note-body{
-  font-family: var(--body);
-  font-size: 15px; line-height:1.55; color: var(--ink);
+.note-body {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
 }
-.prov-bar{
+.prov-bar {
   font-family: var(--meta);
-  font-size: 11px; line-height:1.4;
-  display:inline-block; margin-top:4px;
+  font-size: 11px;
+  line-height: 1.4;
+  display: inline-block;
+  margin-top: 4px;
   padding: 4px 8px;
-  border:1px solid rgba(0,0,0,.15);
-  border-radius: 4px; color: var(--gray);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  color: var(--gray);
 }
-.marginalia{
+.marginalia {
   font-family: var(--meta);
-  font-size: 11px; color: var(--gray);
-  border-left: 2px solid rgba(0,0,0,.15);
-  padding-left: 8px; margin-top: 10px;
+  font-size: 11px;
+  color: var(--gray);
+  border-left: 2px solid rgba(0,0,0,0.15);
+  padding-left: 8px;
+  margin-top: 8px;
 }
 
-/* Closing */
-.closing{
+/* Closing section */
+.closing {
   max-width: 750px;
-  margin: 7rem auto 5rem;
-  padding: 2.2rem;
-  border-top: 1px solid rgba(0,0,0,.15);
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  margin: 6rem auto 5rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(0,0,0,0.15);
   line-height: 1.7;
 }
-.closing h2{
+.closing h2 {
   font-family: var(--display);
-  text-align:center;
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 1.25rem;
 }
-.closing p{ font-size: 1.05rem; color: var(--gray); margin-bottom: 1.5rem; }
-.closing .credit{ text-align:right; font-family: var(--meta); color: var(--gray); font-size:.9rem; letter-spacing:.2px; }
+.closing p {
+  font-size: 1.05rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+.closing .credit {
+  text-align: right;
+  font-family: var(--meta);
+  color: var(--gray);
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+}
 
 /* Footer */
-.footer{
+.footer {
   padding: 40px;
   text-align: center;
   font-family: var(--meta);
   font-size: 10px;
   color: var(--gray);
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
-/* ========================  COMPASS (FINAL)  ======================= */
-.compass{
+/* Compass styles */
+.compass {
   position: fixed;
-  top: 1.0rem;
-  right: 5.4rem;             /* increase to push entire compass LEFT */
-  width: 115px;
+  top: 1rem;
+  right: 5rem;
+  width: 110px;
   aspect-ratio: 1 / 1;
   z-index: 50;
   pointer-events: auto;
 }
-.compass-inner{ position: relative; width:100%; height:100%; overflow: visible; }
-.compass-back, .compass-front{
-  position:absolute; inset:0; width:100%; height:100%;
-  object-fit: contain; pointer-events:none;
+.compass-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
-.compass span{
+.compass-back,
+.compass-front {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.compass span {
   position: absolute;
   font-family: var(--display);
-  font-style: italic; font-weight: 400;
+  font-style: italic;
+  font-weight: 400;
   color: var(--ink);
   line-height: 1;
-  user-select: none; cursor: pointer;
+  user-select: none;
+  cursor: pointer;
   font-size: 0.8rem;
 }
-.north-label{ top:    calc(-1 * var(--offN)); left:50%; transform: translateX(-50%); }
-.south-label{ bottom: calc(-1 * var(--offS)); left:50%; transform: translateX(-50%); }
-.east-label { right:  calc(-1 * var(--offE)); top: 50%; transform: translateY(-50%); }
-.west-label { left:   calc(-1 * var(--offW)); top: 50%; transform: translateY(-50%); }
-.compass span:hover{ color: var(--accent); }
-.compass-front{ will-change: transform; }
+.north-label { top: calc(-1 * var(--offN)); left: 50%; transform: translateX(-50%); }
+.south-label { bottom: calc(-1 * var(--offS)); left: 50%; transform: translateX(-50%); }
+.east-label  { right: calc(-1 * var(--offE)); top: 50%; transform: translateY(-50%); }
+.west-label  { left: calc(-1 * var(--offW)); top: 50%; transform: translateY(-50%); }
+.compass span:hover { color: var(--accent); }
+.compass-front { will-change: transform; }
 
-/* Mobile */
-@media (max-width: 768px){
-  .big-title{ width:92vw; font-size: 12vw; }
-  .author{ margin-top:8px; }
-  .section-plate{ margin: 44px auto; }
-  .plate__notes{ grid-template-columns: 1fr; }
-  .plate__meta{ display:none; }
-
-  .compass{
-    right: 3.8rem;          /* keeps it clear of the mobile scrollbar */
-    top: .8rem;
-    width: 92px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .big-title { font-size: 12vw; width: 90vw; }
+  .author { margin-top: 8px; }
+  .section-plate { margin: 3rem auto; }
+  .plate__notes { grid-template-columns: 1fr; }
+  .plate__meta { display: none; }
+  .secondary-item { flex-basis: 100%; }
+  .compass {
+    right: 3.6rem;
+    top: 0.8rem;
+    width: 90px;
   }
-  .compass span{ font-size: .65rem; }
+  .compass span { font-size: 0.65rem; }
 }
 
-/* Remove any leftover decorative elements from older builds */
-.break-dot, .break-icon{ display:none !important; }
-.break-full::after{ content:none !important; background:none !important; }
+/* Hide any leftover decorative elements from legacy */
+.break-dot, .break-icon { display: none !important; }
+.break-full::after { content: none !important; background: none !important; }
