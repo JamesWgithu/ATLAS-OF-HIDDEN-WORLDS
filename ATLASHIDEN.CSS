@@ -1083,3 +1083,64 @@ transform: translateY(-50%);
   font-size: 0.65rem;
 }
 }
+
+/* === GREAT BLUE HOLE layout === */
+#great-blue-hole { margin-top: 120px; }
+#great-blue-hole .case__titleblock { margin-bottom: 40px; }
+
+.gbh__grid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr 1.9fr;  /* hero is heaviest */
+  gap: 50px;
+  align-items: start;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.gbh__text{ font-family: var(--body); font-size:14px; line-height:1.7; text-align:justify; }
+.gbh__panel{ background:#fff; border:1px solid #ddd; padding:12px; margin-bottom:20px; }
+.gbh__panel img{ width:100%; height:auto; display:block; opacity:.9; }
+.gbh__smallmeta{ font-family: var(--meta); font-size:10px; color: var(--gray); margin-top:6px; }
+.gbh__coords{ font-family: var(--meta); font-size:12px; background:linear-gradient(#eee,#f7f7f7); padding:6px 10px; margin-bottom:8px; text-align:center; }
+.gbh__scale{ display:flex; gap:10px; align-items:center; font-family:var(--meta); font-size:10px; color:#333; }
+.gbh__scale .bar{ width:60px; height:1px; background:#333; display:inline-block; }
+
+/* two small panels side-by-side */
+.gbh__twocol{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+
+/* Big hero */
+.gbh__hero{ position:relative; }
+.gbh__hero img{
+  width: 100%;
+  max-width: 820px;        /* make it noticeably larger */
+  height: auto;
+  display:block;
+  margin-left: auto;       /* hugs right edge of its column */
+  opacity:.98;
+}
+
+/* Dotted curve positioned to the left of the hero image */
+.gbh__dots{
+  position:absolute;
+  left: -140px;            /* adjust to tuck into the centre column */
+  top: 8%;
+  width: 260px;
+  height: 84%;
+  overflow: visible;
+  pointer-events:none;
+  opacity:.95;
+}
+
+/* Responsive collapse */
+@media (max-width: 1100px){
+  .gbh__grid{ grid-template-columns: 1fr; }
+  .gbh__hero img{ max-width: 680px; margin: 0 auto; }
+  .gbh__dots{ position:absolute; left: -20px; top: 0; width: 200px; height: 70%; }
+}
+
+@media (max-width: 700px){
+  .gbh__hero img{ max-width: 94vw; }
+  .gbh__twocol{ grid-template-columns: 1fr; }
+  .gbh__dots{ display:none; } /* optional: hide dotted curve on very small screens */
+}
