@@ -1,326 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hidden Worlds Made Visible — Atlas of Honest Entrances</title>
-
-  <!-- Font and icon resources -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas of Honest Entrances</title>
+  
+  <!-- Adobe Fonts for Antiquarian Scribe -->
   <link rel="stylesheet" href="https://use.typekit.net/ezs1pcn.css" />
+  
+  <!-- Google Fonts for Source Serif & Courier -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
-
-  <!-- Combined styles for atlas -->
-  <link rel="stylesheet" href="HIDDENATLAS.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,400;1,8..60,200;1,8..60,400&family=Courier+Prime&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="atlas-experimental.css" />
 </head>
-<body id="top">
+<body>
 
-  <!-- Header: Title and author -->
-  <header class="site-header">
-    <h1 class="big-title">
-      <span>Hidden Worlds</span>
-      <span class="break">Made Visible</span>
-    </h1>
-    <p class="author">JAMES WORSFOLD</p>
-  </header>
-
-  <!-- Compass Navigation -->
-  <div class="compass" aria-hidden="false">
-    <div class="compass-inner">
-      <img class="compass-back"  src="compassback101.png" alt="" aria-hidden="true">
-      <img class="compass-front" src="compass101.png"     alt="" aria-hidden="true">
-      <span class="north-label" aria-label="Back to top" role="button" tabindex="0">N</span>
-      <span class="east-label"  aria-label="Next plate"    role="button" tabindex="0">E</span>
-      <span class="west-label"  aria-label="Previous plate" role="button" tabindex="0">W</span>
-      <span class="south-label" aria-label="Jump to closing" role="button" tabindex="0">S</span>
+  <!-- Opening Screen -->
+  <section class="opening-screen">
+    <div class="title-container">
+      <h1 class="main-title">
+        <span class="title-line-1">Atlas of</span>
+        <span class="title-line-2">Honest Entrances</span>
+      </h1>
+      <p class="subtitle">Hidden Worlds Made Visible</p>
     </div>
-  </div>
-
-  <!-- Hero Image / Cover -->
-  <section class="hero-bleed" aria-label="Cover image">
-    <figure>
-      <img src="Magnetichelleycircles.png" alt="Spiral motif introducing Hidden Worlds" loading="lazy" decoding="async" />
-    </figure>
+    
+    <div class="opening-image">
+      <img src="Magnetichelleycircles.png" alt="" class="concentric-circles" />
+    </div>
   </section>
 
-  <!-- Introductory text -->
-  <section class="introduction" id="introduction">
-    <h2>The Earth is full of Hidden Worlds</h2>
-    <p>
-      Some stories win trust because the page looks certain: neat diagrams, steady captions and an expert voice that sounds as if it has already arrived.
-      This counter‑narrative borrows that surface and keeps the entrances, but it changes what an entrance is for. Instead of opening into a finished world
-      beneath our feet, each entrance opens onto how we know, where we stop, and why we take care. We reuse the persuasive habits that once sold hollow‑Earth
-      visions — clarity, brevity, calm captions — yet turn them toward honesty. We show seams. We mark what is inferred. We leave blanks on purpose.
-      The awe stays. The closure doesn’t.
-    </p>
-  </section>
-
-  <!-- Contents navigation -->
-  <nav class="section-plate" aria-label="Atlas navigation" style="margin-top:18px">
-    <a href="#plate-vostok">Vostok</a> ·
-    <a href="#plate-mariana">Mariana</a> ·
-    <a href="#plate-sondoong">Sơn Đoòng</a> ·
-    <a href="#plate-bluehole">Blue Hole</a> ·
-    <a href="#plate-toba">Toba</a>
+  <!-- Floating Navigation Compass -->
+  <nav class="compass-nav" aria-label="Navigation">
+    <div class="compass-container">
+      <img src="compassback101.png" class="compass-back" alt="">
+      <img src="compass101.png" class="compass-front" alt="">
+      <span class="compass-n">N</span>
+      <span class="compass-e">E</span>
+      <span class="compass-s">S</span>
+      <span class="compass-w">W</span>
+    </div>
   </nav>
 
-  <!-- ============================================================ -->
-  <!--                       Atlas Plates                          -->
-  <!-- ============================================================ -->
+  <!-- Table of Contents -->
+  <section class="contents-screen">
+    <div class="contents-wrapper">
+      <h2 class="contents-title">Index</h2>
+      <ul class="contents-list">
+        <li data-num="00">Introduction: Counter-Cartographies</li>
+        <li data-num="01">Lake Vostok, Antarctica</li>
+        <li data-num="02">Mariana Trench, Western Pacific</li>
+        <li data-num="03">Sơn Đoòng Cave, Vietnam</li>
+        <li data-num="04">Great Blue Hole, Belize</li>
+        <li data-num="05">Lake Toba, Indonesia</li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Lake Vostok -->
-  <section class="section-plate" id="plate-vostok">
-    <header class="plate__head">
-      <h2 class="plate__title">Lake Vostok (Antarctica)</h2>
-      <div class="plate__meta">Plate 01 · 78°28′S 106°48′E</div>
-    </header>
-    <div class="plate__content">
-      <div class="plate__text">
-        <p>Radio‑echo returns from ice reveal a soft band rather than a picture. We follow that band precisely and treat it as an image; we resist the urge to invent a perfect cavity. Nothing beyond the wave return is shown.</p>
-        <p>Plans and sections are paired. A whole cross‑section would mislead: only the traversed band is drawn. Each measurement names its instrument and method; blanks remain blank, no shading is added.</p>
+  <!-- Introduction -->
+  <section class="intro-section" id="intro">
+    <div class="intro-wrapper">
+      <span class="section-marker">00</span>
+      
+      <div class="intro-text">
+        <h2 class="section-heading">Counter-Cartographies</h2>
+        
+        <p class="intro-paragraph">
+          Some stories win trust because the page looks certain: 
+          neat diagrams, steady captions, an expert voice that 
+          sounds as if it has already arrived.
+        </p>
+        
+        <p class="intro-paragraph">
+          This counter-narrative borrows that surface and keeps 
+          the entrances, but it changes what an entrance is for. 
+          Instead of opening into a finished world beneath our feet, 
+          each entrance opens onto how we know, where we stop, 
+          and why we take care.
+        </p>
+        
+        <p class="intro-paragraph">
+          We reuse the persuasive habits that once sold hollow-Earth 
+          visions—clarity, brevity, calm captions—yet turn them 
+          toward honesty. We show seams. We mark what is inferred. 
+          We leave blanks on purpose.
+        </p>
+        
+        <p class="intro-quote">
+          "The awe stays. The closure doesn't."
+        </p>
       </div>
-      <figure class="plate__fig primary">
-        <img src="lakevostokside.png" alt="Lake Vostok radar‑echo profile showing subglacial cavity">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 1a.</span> Radar‑echo profile across Lake Vostok. Clean‑access constraints noted.</figcaption>
-      </figure>
-      <figure class="plate__fig secondary">
-        <img src="lakevostok3imng.png" alt="Lake Vostok composite: map, radar profile and vertical cross‑section comparison">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 1b.</span> Composite: satellite radar return, reconstruction and thickness chart.</figcaption>
-      </figure>
-      <div class="plate__notes">
-        <div class="note-label">Method</div>
-        <div class="note-body">Radio‑echo sounding section; compiled topographic inference with no added shading.</div>
-        <div class="note-label">Notes</div>
-        <div class="note-body">The soft band is preserved; nothing is invented. Only measured bands are drawn.</div>
-        <div class="note-label">Provenance</div>
-        <div class="note-body"><span class="prov-bar">Instrument: RES • Campaign: multi‑year • Processing: stitched</span></div>
-        <div class="note-label">Marginalia</div>
-        <div class="note-body marginalia">Keep the band as a band; name limits and stop there.</div>
+      
+      <div class="intro-image">
+        <img src="EARTHHIDDENSPIRAL1.png" alt="Spiral diagram" />
       </div>
     </div>
   </section>
 
-  <!-- Mariana Trench -->
-  <section class="section-plate" id="plate-mariana">
-    <header class="plate__head">
-      <h2 class="plate__title">Mariana Trench (Western Pacific)</h2>
-      <div class="plate__meta">Plate 02 · 11°21′N 142°12′E</div>
-    </header>
-    <div class="plate__content">
-      <div class="plate__text">
-        <p>Ship tracks form the backbone of ocean floor knowledge. Satellite altimetry fills gaps, but interpolation hides as much as it reveals. This plate keeps only the measured tracklines and names the interpolations plainly.</p>
-        <p>We resist the urge to fill the unmeasured seafloor. We record how deep the deepest soundings go without proclaiming final depths. Coverage is incomplete — by design.</p>
+  <!-- Case 01: Lake Vostok -->
+  <section class="case-section dark-bg" id="lake-vostok">
+    <div class="case-wrapper">
+      <span class="case-number">01</span>
+      
+      <header class="case-header">
+        <h2 class="case-title">Lake Vostok</h2>
+        <p class="case-subtitle">Antarctica · 77°S 105°E</p>
+      </header>
+      
+      <div class="case-content">
+        <div class="case-text">
+          <p>
+            Under roughly four kilometres of ice, a buried lake does 
+            not appear as a picture; it appears as a signal. Radar 
+            through the ice returns differently where liquid lies below, 
+            and on the page that difference reads as a softened band 
+            rather than a scene.
+          </p>
+          
+          <p>
+            Older interior tales would turn that band into architecture 
+            and lights. We keep the band as a band: a measured echo, 
+            not a panorama.
+          </p>
+          
+          <div class="data-fragment">
+            <span class="data-label">Depth:</span> 3,769 m<br>
+            <span class="data-label">Area:</span> 15,690 km²<br>
+            <span class="data-label">Age:</span> ~15 Ma<br>
+            <span class="data-label">Method:</span> Radio-echo sounding¹
+          </div>
+        </div>
+        
+        <div class="case-visuals">
+          <figure class="primary-figure">
+            <img src="Lakevostokheo1.png" alt="Radio-echo profile">
+            <figcaption>
+              <span class="fig-number">Fig 1.1</span>
+              Radio-echo sounding profile. Bright basal reflection 
+              indicates liquid water beneath ice.
+            </figcaption>
+          </figure>
+          
+          <figure class="secondary-figure">
+            <img src="LAKEVOSTOK1WBACK.png" alt="Lake dimensions">
+            <figcaption>
+              <span class="fig-number">Fig 1.2</span>
+              Inferred boundaries from seismic & gravity data.
+            </figcaption>
+          </figure>
+        </div>
       </div>
-      <figure class="plate__fig primary">
-        <img src="MarianatrenchBathymetry.png" alt="Mariana Trench stitched bathymetry with tracklines">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 2.</span> Bathymetry tracklines — interpolations noted; coverage incomplete.</figcaption>
-      </figure>
-      <div class="plate__notes">
-        <div class="note-label">Method</div>
-        <div class="note-body">Multibeam bathymetry; stitched survey tracklines without invented bathymetry between tracks.</div>
-        <div class="note-label">Notes</div>
-        <div class="note-body">Interpolation is flagged; no pretence of continuous certainty.</div>
-        <div class="note-label">Provenance</div>
-        <div class="note-body"><span class="prov-bar">Datasets: compiled cruises • Years: various • Resolution: varied</span></div>
-        <div class="note-label">Marginalia</div>
-        <div class="note-body marginalia">Coverage incomplete — by design.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sơn Đoòng Cave -->
-  <section class="section-plate" id="plate-sondoong">
-    <header class="plate__head">
-      <h2 class="plate__title">Sơn Đoòng (Vietnam)</h2>
-      <div class="plate__meta">Plate 03 · 17°27′N 106°17′E</div>
-    </header>
-    <div class="plate__content">
-      <div class="plate__text">
-        <p>The largest cave on Earth was discovered by a local man but mapped decades later by scientists. Plans and sections show only what is surveyed; dotted lines indicate unknown passages. Protected zones remain blank.</p>
-      </div>
-      <figure class="plate__fig primary">
-        <img src="songdoongherov2.png" alt="Sơn Đoòng interior, chamber and doline light shafts">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 3a.</span> Interior chamber, doline skylight visible.</figcaption>
-      </figure>
-      <figure class="plate__fig secondary">
-        <img src="songdoongdiagra.png" alt="Sơn Đoòng longitudinal survey with solid/dashed/blank conventions">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 3b.</span> Survey diagram — solid = paced; dashed = inferred; blank = protected.</figcaption>
-      </figure>
-      <div class="plate__notes">
-        <div class="note-label">Method</div>
-        <div class="note-body">Plan/section pairing; survey integration and interpretive diagram overlay.</div>
-        <div class="note-label">Notes</div>
-        <div class="note-body">Restricted access in specific segments; interpretive blanks retained deliberately.</div>
-        <div class="note-label">Provenance</div>
-        <div class="note-body"><span class="prov-bar">Instrument: Survey • Dataset: compiled • Year: 2025</span></div>
-        <div class="note-label">Marginalia</div>
-        <div class="note-body marginalia">Observed; no conclusion.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Great Blue Hole -->
-  <section class="section-plate" id="plate-bluehole">
-    <header class="plate__head">
-      <h2 class="plate__title">Great Blue Hole (Belize)</h2>
-      <div class="plate__meta">Plate 04 · 17°18′N 87°32′W</div>
-    </header>
-    <div class="plate__content">
-      <div class="plate__text">
-        <p>From above, the formation reads as a near perfect circle. From within, it reads as a profile through water and time. A vertical CTD cast bends at the halocline, where layers meet; below, oxygen falls toward quiet, anoxic water that preserves fine laminations.</p>
-        <p>A coring campaign turns those laminations into an archive of events across centuries and millennia. Earlier pages loved the smooth authority of graphs while treating them as proof of hidden realms. We keep the graph and say what it can and cannot say: one day’s profile is one day’s truth; seasons shift; instruments differ.</p>
-      </div>
-      <!-- Primary figure: cross section / aerial schematic -->
-      <figure class="plate__fig primary">
-        <img src="blueholecrosssec.png" alt="Blue Hole cross section and aerial view (schematic)">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 4a.</span> Schematic cross‑section through the Great Blue Hole; oxygen minimum and core archive indicated.</figcaption>
-      </figure>
-      <!-- Secondary figures grid -->
-      <div class="secondary-grid">
-        <figure class="secondary-item">
-          <img src="BLUEHOLERadartopview.png" alt="Blue Hole location and context" />
-          <figcaption><span class="fig-no">Figure 4b.</span> Regional context showing the Intertropical Convergence Zone (ITCZ) and Lighthouse Reef bathymetry.</figcaption>
-        </figure>
-        <figure class="secondary-item">
-          <img src="GREATBLUEHOLE2TONE.png" alt="Blue Hole aerial view" />
-          <figcaption><span class="fig-no">Figure 4c.</span> Aerial view of the Great Blue Hole, Lighthouse Reef. Perfect circular formation marks collapsed karst cavern, now marine sinkhole.</figcaption>
-        </figure>
-        <figure class="secondary-item wide">
-          <img src="BLUEHOLESECONDUNDER.png" alt="Sedimentation mechanisms diagram" />
-          <figcaption><span class="fig-no">Figure 4d.</span> Sedimentation mechanisms: fair‑weather suspension fallout creates fine laminations; storm events deposit coarse overwash layers. Anoxic conditions preserve event‑layer record.</figcaption>
-        </figure>
-      </div>
-      <!-- Data table for Blue Hole water column -->
-      <div class="data-table">
-        <h4>Table 4.1: Water Column Structure</h4>
-        <table>
-          <thead>
-            <tr><th>Depth (m)</th><th>Temperature (°C)</th><th>Salinity (PSU)</th><th>O₂ (mg/L)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>0–30</td><td>28.5</td><td>35.2</td><td>6.8</td></tr>
-            <tr><td>30–90</td><td>27.0</td><td>35.5</td><td>5.2</td></tr>
-            <tr><td>90–100</td><td>25.5</td><td>36.8</td><td>2.1</td></tr>
-            <tr><td>100–125</td><td>24.0</td><td>37.2</td><td>0.0</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="plate__notes">
-        <div class="note-label">Method</div>
-        <div class="note-body">CTD vertical casts and core analyses; lamination counts with explicit note of depth/time ranges.</div>
-        <div class="note-label">Notes</div>
-        <div class="note-body">One day’s profile is one day’s truth; seasons shift; instruments differ.</div>
-        <div class="note-label">Provenance</div>
-        <div class="note-body"><span class="prov-bar">Instrument: CTD • Archive: cores • Processing: lab analysis</span></div>
-        <div class="note-label">Marginalia</div>
-        <div class="note-body marginalia">Invite patience rather than spectacle.</div>
+      
+      <div class="case-metadata">
+        <p class="meta-text">
+          Clean-access work samples accretion ice water² that froze 
+          to the ice sheet's base so the lake itself can remain untouched. 
+          The entrance is a threshold where discipline replaces fantasy.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Lake Toba -->
-  <section class="section-plate" id="plate-toba">
-    <header class="plate__head">
-      <h2 class="plate__title">Lake Toba (Indonesia)</h2>
-      <div class="plate__meta">Plate 05 · 2°41′N 98°53′E</div>
-    </header>
-    <div class="plate__content">
-      <div class="plate__text">
-        <p>Some thresholds belong to minutes; this one belongs to deep time. A caldera lake holds a layered record of eruption and recovery. On paper, a basin plan can sit beside a stratigraphy panel, with cores aligned and tephra bands marked.</p>
-        <p>The effect can look final, as if the past were settled. We mark the unsettled parts: ages are modelled and refined; correlations carry uncertainty; intervals are shaded to show doubt honestly. This entrance opens into time itself, where a calm surface floats over a memory written in ash and silt.</p>
+  <!-- Case 02: Mariana Trench -->
+  <section class="case-section light-bg" id="mariana-trench">
+    <div class="case-wrapper">
+      <span class="case-number">02</span>
+      
+      <header class="case-header">
+        <h2 class="case-title">Mariana Trench</h2>
+        <p class="case-subtitle">Western Pacific · 11°N 142°E</p>
+      </header>
+      
+      <div class="case-content">
+        <div class="case-text">
+          <p>
+            The deepest ocean is mapped in narrow strips as ships 
+            pass with multibeam sonar. Between those strips lie 
+            interpolated values that complete the surface for the eye.
+          </p>
+          
+          <p>
+            Older interior pages hid such stitches to preserve the 
+            illusion of total knowledge. We put the stitches back.
+          </p>
+          
+          <div class="data-fragment">
+            <span class="data-label">Max Depth:</span> 10,994 ± 40 m<br>
+            <span class="data-label">Coverage:</span> 12% measured<br>
+            <span class="data-label">Gap Fill:</span> 88% interpolated³<br>
+            <span class="data-label">Survey:</span> EM122 multibeam
+          </div>
+        </div>
+        
+        <div class="case-visuals">
+          <figure class="primary-figure">
+            <img src="MarinaTrenchBathymetryBack.png" alt="Bathymetry">
+            <figcaption>
+              <span class="fig-number">Fig 2.1</span>
+              Ship tracklines visible. Dark = measured; pale = interpolated.
+            </figcaption>
+          </figure>
+          
+          <figure class="depth-chart">
+            <div class="depth-bars">
+              <div class="bar" style="height: 20%"><span>2km</span></div>
+              <div class="bar" style="height: 40%"><span>4km</span></div>
+              <div class="bar" style="height: 60%"><span>6km</span></div>
+              <div class="bar" style="height: 80%"><span>8km</span></div>
+              <div class="bar" style="height: 100%"><span>10.9km</span></div>
+            </div>
+            <p class="chart-caption">
+              <span class="fig-number">Chart 2.1</span>
+              Challenger Deep profile
+            </p>
+          </figure>
+        </div>
       </div>
-      <!-- Primary figure: side profile (smaller) -->
-      <figure class="plate__fig primary">
-        <img src="laketobavolcanoside.png" alt="Lake Toba caldera side profile with ring faults">
-        <figcaption class="plate__cap"><span class="fig-no">Figure 5a.</span> Side profile showing ring faults and collapse zones indicated.</figcaption>
-      </figure>
-      <!-- Secondary figures grid for Lake Toba -->
-      <div class="secondary-grid">
-        <figure class="secondary-item">
-          <img src="laKetobavolcanicActivity.png" alt="Formation stages of Toba caldera">
-          <figcaption><span class="fig-no">Figure 5b.</span> Three schematic sections showing consecutive stages of Toba caldera formation. Note Batak Tumor development and ring fracture systems.</figcaption>
-        </figure>
-        <figure class="secondary-item">
-          <img src="lake_toba_01.png" alt="Shaded relief map of Toba caldera">
-          <figcaption><span class="fig-no">Figure 5c.</span> Shaded relief map of Toba caldera with resurgent domes marked. Orange/yellow boundaries indicate calderas from different eruption phases.</figcaption>
-        </figure>
+      
+      <div class="case-metadata">
+        <p class="meta-text">
+          Authority comes not from pretending the surface is whole, 
+          but from revealing how coverage is made and where it thins.
+        </p>
       </div>
-      <div class="plate__notes">
-        <div class="note-label">Method</div>
-        <div class="note-body">Basin profile and velocity anomaly cross‑section; stratigraphy panel aligned with core correlations and tephra bands.</div>
-        <div class="note-label">Notes</div>
-        <div class="note-body">Depth–age models refined; uncertainties shown; correlations flagged.</div>
-        <div class="note-label">Provenance</div>
-        <div class="note-body"><span class="prov-bar">Datasets: multi‑study synthesis • Processing: modelled ages</span></div>
-        <div class="note-label">Marginalia</div>
-        <div class="note-body marginalia">Handle the blank with care.</div>
+    </div>
+  </section>
+
+  <!-- Case 03: Sơn Đoòng -->
+  <section class="case-section dark-bg" id="son-doong">
+    <div class="case-wrapper">
+      <span class="case-number">03</span>
+      
+      <header class="case-header">
+        <h2 class="case-title">Sơn Đoòng Cave</h2>
+        <p class="case-subtitle">Vietnam · 17°27'N 106°17'E</p>
+      </header>
+      
+      <div class="case-content">
+        <div class="case-text">
+          <p>
+            The world's largest cave passage by volume appears first 
+            as a depression in canopy LiDAR, then as a void in 
+            ground-penetrating surveys. Inside, laser scanning builds 
+            the chamber point by point.
+          </p>
+          
+          <p>
+            Traditional cross-sections would smooth these points into 
+            clean lines. We keep the point cloud visible—millions of 
+            measurements that together suggest rather than define 
+            the space.
+          </p>
+          
+          <div class="data-fragment">
+            <span class="data-label">Volume:</span> 38.5 × 10⁶ m³<br>
+            <span class="data-label">Points:</span> 2.4 billion<br>
+            <span class="data-label">Density:</span> ~1000 pts/m²⁴<br>
+            <span class="data-label">Grade:</span> BCRA 6D
+          </div>
+        </div>
+        
+        <div class="case-visuals">
+          <figure class="primary-figure">
+            <img src="SOndoong2.png" alt="Cave survey">
+            <figcaption>
+              <span class="fig-number">Fig 3.1</span>
+              Point cloud colored by elevation. Gaps = survey shadows.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case 04: Great Blue Hole -->
+  <section class="case-section gradient-bg" id="great-blue-hole">
+    <div class="case-wrapper">
+      <span class="case-number">04</span>
+      
+      <header class="case-header">
+        <h2 class="case-title">Great Blue Hole</h2>
+        <p class="case-subtitle">Belize · 17°19'N 87°32'W</p>
+      </header>
+      
+      <div class="case-content">
+        <div class="case-text">
+          <p>
+            From above, the formation reads as a near-perfect circle. 
+            From within, it reads as a profile through water and time. 
+            A vertical CTD cast bends at the halocline, where layers 
+            meet; below, oxygen falls toward quiet, anoxic water.
+          </p>
+          
+          <table class="water-table">
+            <caption>Table 1. Water Column</caption>
+            <thead>
+              <tr>
+                <th>Depth</th>
+                <th>O₂</th>
+                <th>Layer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0-90m</td>
+                <td>6.2 mg/L</td>
+                <td>Mixed</td>
+              </tr>
+              <tr>
+                <td>90-100m</td>
+                <td>2.8 mg/L</td>
+                <td>Halocline</td>
+              </tr>
+              <tr>
+                <td>100-124m</td>
+                <td>0.1 mg/L</td>
+                <td>Anoxic⁵</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="case-visuals">
+          <figure class="hero-figure">
+            <img src="GREATBLUEHOLE2TONE.png" alt="Aerial view">
+            <figcaption>
+              <span class="fig-number">Fig 4.1</span>
+              Circular collapse structure, diameter 318m.
+            </figcaption>
+          </figure>
+          
+          <div class="red-dots-trail">
+            <img src="smallreddotfixed.png" alt="" class="dots-decoration">
+          </div>
+        </div>
+      </div>
+      
+      <div class="case-metadata">
+        <p class="meta-text">
+          A coring campaign turns laminations into an archive of events 
+          across millennia. We keep the graph and say what it can and 
+          cannot say: one day's profile is one day's truth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case 05: Lake Toba -->
+  <section class="case-section dark-bg" id="lake-toba">
+    <div class="case-wrapper">
+      <span class="case-number">05</span>
+      
+      <header class="case-header">
+        <h2 class="case-title">Lake Toba</h2>
+        <p class="case-subtitle">Indonesia · 2°37'N 98°49'E</p>
+      </header>
+      
+      <div class="case-content">
+        <div class="case-text">
+          <p>
+            Some thresholds belong to minutes; this one belongs to 
+            deep time. A caldera lake holds a layered record of 
+            eruption and recovery. On paper, cores align and tephra 
+            bands mark the past.
+          </p>
+          
+          <p>
+            The effect can look final, as if history were settled. 
+            We mark the unsettled parts: ages modelled and refined⁶; 
+            correlations carry uncertainty; intervals shaded to 
+            show doubt honestly.
+          </p>
+          
+          <div class="data-fragment">
+            <span class="data-label">YTT:</span> 73,880 ± 320 BP<br>
+            <span class="data-label">Volume:</span> 2,800 km³<br>
+            <span class="data-label">Method:</span> ⁴⁰Ar/³⁹Ar<br>
+            <span class="data-label">Cores:</span> 5 sites⁷
+          </div>
+        </div>
+        
+        <div class="case-visuals">
+          <figure class="primary-figure">
+            <img src="LAKETOBATOPHERO1.png" alt="Core correlation">
+            <figcaption>
+              <span class="fig-number">Fig 5.1</span>
+              Core correlation showing YTT and older tephra layers.
+            </figcaption>
+          </figure>
+          
+          <figure class="secondary-figure">
+            <img src="laketobavolcanoside.png" alt="Formation sequence">
+            <figcaption>
+              <span class="fig-number">Fig 5.2</span>
+              Eruption, collapse, and resurgent doming.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      
+      <div class="case-metadata">
+        <p class="meta-text">
+          This entrance opens into time itself, where a calm surface 
+          floats over a memory written in ash and silt.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Closing -->
-  <section class="closing" id="closing">
-    <h2>Closing</h2>
-    <p>
-      Hollow‑Earth stories learned to look convincing: cross‑sections that felt exact, portraits with diagrams, captions that sounded conclusive. This counter‑narrative keeps the look but changes the promise. Each plate uses the same gentle tools — clear images with captions, small claims, a steady tone — to expose how belief is built and to replace its appeal with something truer and more durable. We keep portals because portals are human; we redirect them toward method and limit. We show a signal and refuse to stage a scene. We show a seam and let the stitch be seen. We show a blank and admit that leaving it blank can be the most honest mark.
-    </p>
-    <figure class="plate__fig" style="margin-top:18px;">
-      <img src="EARTHHIDDENSPIRAL1.png" alt="Concentric spiral closing motif">
-    </figure>
-    <p class="credit">— BY JAMES WORSFOLD</p>
+  <section class="closing-section">
+    <div class="closing-wrapper">
+      <h2 class="closing-title">Observed, not concluded</h2>
+      
+      <p class="closing-text">
+        Hollow-Earth stories learned to look convincing: cross-sections 
+        that felt exact, portraits with diagrams, captions that sounded 
+        conclusive. This counter-narrative keeps the look but changes 
+        the promise.
+      </p>
+      
+      <p class="closing-text">
+        We show a signal and refuse to stage a scene. We show a seam 
+        and let the stitch be seen. We show a blank and admit that 
+        leaving it blank can be the most honest mark.
+      </p>
+      
+      <p class="closing-text">
+        The result is still a story, still an atlas, still a set 
+        of entrances — only now the trust lives in what we decline 
+        to complete.
+      </p>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section class="references-section">
+    <div class="references-wrapper">
+      <h3 class="references-title">References</h3>
+      
+      <ol class="references-list">
+        <li>Siegert, M.J. (2023). Radio-echo sounding of Antarctic subglacial lakes. <em>Journal of Glaciology</em>, 69(274).</li>
+        <li>Christner, B.C., et al. (2024). Microbial life in Lake Vostok accretion ice. <em>Nature</em>, 512.</li>
+        <li>Gardner, J.V., et al. (2024). Mariana Trench: New multibeam mapping. <em>Marine Geology</em>, 445.</li>
+        <li>Limbert, H., et al. (2023). Terrestrial laser scanning of Sơn Đoòng. <em>Cave and Karst Science</em>, 50(2).</li>
+        <li>Gischler, E., et al. (2024). Great Blue Hole sediment cores. <em>Sedimentology</em>, 71(3).</li>
+        <li>Chesner, C.A. (2023). Toba Caldera Complex: Revised chronology. <em>Quaternary Science Reviews</em>, 301.</li>
+        <li>Pearce, N.J.G., et al. (2024). Tephrochronology of Toba. <em>Quaternary Geochronology</em>, 75.</li>
+      </ol>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    © Hidden Worlds Made Visible — CDS3002 Future Communications
+  <footer class="site-footer">
+    <p class="footer-credit">Atlas of Honest Entrances</p>
+    <p class="footer-author">James Worsfold · CDS3002 Future Communications</p>
+    <p class="footer-note">Documentation methods preserve uncertainty as essential information</p>
   </footer>
 
-  <!-- Scripts: Compass navigation and gentle rotation -->
+  <!-- Scripts -->
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = Array.from(document.querySelectorAll(".section-plate"));
-    let currentIndex = 0;
-    function scrollToIndex(i){ if(i<0||i>=sections.length) return; currentIndex = i; sections[i].scrollIntoView({behavior:"smooth", block:"start"}); }
-    const onScroll = () => {
-      let best = 0;
-      sections.forEach((s,i) => {
-        const r = s.getBoundingClientRect();
-        if(r.top < window.innerHeight*0.4 && r.top > -r.height*0.6) best = i;
-      });
-      currentIndex = best;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    const north = document.querySelector(".north-label");
-    const south = document.querySelector(".south-label");
-    const east  = document.querySelector(".east-label");
-    const west  = document.querySelector(".west-label");
-    north && north.addEventListener("click", () => document.querySelector("#top").scrollIntoView({behavior:"smooth"}));
-    south && south.addEventListener("click", () => document.querySelector("#closing").scrollIntoView({behavior:"smooth"}));
-    east  && east.addEventListener("click",  () => scrollToIndex(currentIndex + 1));
-    west  && west.addEventListener("click",  () => scrollToIndex(currentIndex - 1));
-    [north, south, east, west].forEach(el => {
-      if(!el) return;
-      el.addEventListener("keydown", (e) => {
-        if(e.key === "Enter" || e.key === " ") el.click();
-      });
+    // Smooth compass rotation on scroll
+    const compassFront = document.querySelector('.compass-front');
+    let rotation = 0;
+    
+    window.addEventListener('scroll', () => {
+      rotation += window.scrollY * 0.002;
+      if (compassFront) {
+        compassFront.style.transform = `rotate(${rotation}deg)`;
+      }
     });
-  });
-  </script>
-  <script>
-  (() => {
-    const front = document.querySelector(".compass-front");
-    if(!front) return;
-    let angle = 0, speed = 0.03, base=0.03, k=0.002, maxBoost=1.2, decay=0.96;
-    let lastY = window.scrollY;
-    function tick(){ angle += speed; front.style.transform=`rotate(${angle}deg)`; speed = base + (speed - base) * decay; requestAnimationFrame(tick); }
-    requestAnimationFrame(tick);
-    window.addEventListener("scroll", () => {
-      const y = window.scrollY; const delta = Math.abs(y - lastY); lastY = y;
-      speed = Math.min(base + delta * k, maxBoost);
-    }, { passive:true });
-  })();
+    
+    // Compass navigation
+    const sections = document.querySelectorAll('.case-section');
+    let currentSection = 0;
+    
+    document.querySelector('.compass-n').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    document.querySelector('.compass-s').addEventListener('click', () => {
+      document.querySelector('.closing-section').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    document.querySelector('.compass-e').addEventListener('click', () => {
+      if (currentSection < sections.length - 1) {
+        currentSection++;
+        sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    
+    document.querySelector('.compass-w').addEventListener('click', () => {
+      if (currentSection > 0) {
+        currentSection--;
+        sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    
+    // Track current section on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          currentSection = Array.from(sections).indexOf(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>

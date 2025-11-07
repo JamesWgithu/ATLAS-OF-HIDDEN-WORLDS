@@ -1360,3 +1360,58 @@ transform: translateY(-50%);
   font-style: italic;
   color: var(--ink);
 }
+
+/* === Secondary Figures (smaller supporting images) === */
+.case__panel.secondary,
+.casestudy .secondary {
+  max-width: 70%;
+  margin: 20px auto;
+}
+
+.case__panel.secondary img,
+.casestudy .secondary img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* Specific for Lake Vostok side figure */
+#lake-vostok .side-figure {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#lake-vostok .side-figure img {
+  width: 65%;
+  height: auto;
+  border: none;
+  opacity: 0.95;
+}
+
+/* --- Lake Vostok tidy stack --- */
+#lake-vostok .case__fig .case__panel { margin-bottom: 22px; }
+#lake-vostok .case__fig .case__panel.secondary {
+  max-width: 78%;
+  margin: 14px auto 22px;
+}
+#lake-vostok .case__fig .case__panel.secondary img { opacity: .96; }
+
+/* Ensure labels sit consistently on small cards too */
+#lake-vostok .case__panel .case__panel-label {
+  font-family: var(--meta);
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Harmonise figure captions weight with others on this plate */
+#lake-vostok figcaption { font-family: var(--meta); font-size: 11px; color: var(--gray); }
+
+/* Slightly larger hero A to read like other main plates */
+#lake-vostok .case__fig .case__panel:first-child figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
