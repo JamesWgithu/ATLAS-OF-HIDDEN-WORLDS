@@ -1110,3 +1110,29 @@ body{
 #lake-toba-case .case__titleblock {
   margin-bottom: 40px; /* reduce big space under title */
 }
+
+/* Lake Toba insets */
+#lake-toba .inset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 18px;           /* pulls insets close to the main image */
+}
+
+#lake-toba .inset img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#lake-toba .inset figcaption {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 6px;
+  color: var(--gray, #666);
+}
+
+/* Stack insets on narrow screens */
+@media (max-width: 900px) {
+  #lake-toba .inset-grid { grid-template-columns: 1fr; }
+}
