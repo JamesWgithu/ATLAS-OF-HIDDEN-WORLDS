@@ -1136,3 +1136,123 @@ body{
 @media (max-width: 900px) {
   #lake-toba .inset-grid { grid-template-columns: 1fr; }
 }
+
+
+/* --- Lake Toba layout + scaling hierarchy --- */
+
+/* Layout alignment */
+#lake-toba {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 0;
+}
+
+#lake-toba .width75 {
+  flex: 3;
+}
+
+#lake-toba .width25 {
+  flex: 1;
+}
+
+#lake-toba-case .case__titleblock {
+  margin-bottom: 40px;
+}
+
+/* Main hero image: large and dominant */
+#lake-toba .width75 figure img {
+  width: 100%;              /* restore full container width */
+  max-width: 1150px;        /* cap so it doesn't stretch too wide on 4K screens */
+  display: block;
+  margin: 0 auto;
+  opacity: 0.98;
+}
+
+/* Give main image more presence */
+#lake-toba .width75 figure {
+  margin-bottom: 40px;
+}
+
+/* Inset images: smaller, balanced */
+#lake-toba .inset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+#lake-toba .inset {
+  max-width: 520px;
+}
+
+#lake-toba .inset img {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+#lake-toba .inset figcaption {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin-top: 4px;
+  color: var(--gray, #666);
+  text-align: left;
+}
+
+/* Stack insets on smaller screens */
+@media (max-width: 900px) {
+  #lake-toba .inset-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lake Toba spacing under title */
+#lake-toba-case .case__titleblock { margin-bottom: 28px; }
+
+/* Hero dominates */
+#lake-toba .width75 figure img {
+  width: 100%;
+  max-width: 1150px;         /* safe cap on very wide screens */
+  display: block;
+  margin: 0 auto;
+  opacity: .98;
+}
+#lake-toba .width75 figure { margin-bottom: 28px; }
+
+/* Insets live under hero, smaller */
+#lake-toba .inset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+#lake-toba .inset { max-width: 520px; margin: 0 auto; }
+#lake-toba .inset img { width: 92%; display: block; margin: 0 auto; opacity: .9; }
+#lake-toba .inset figcaption { font-size: .8rem; line-height: 1.35; margin-top: 4px; color: var(--gray); }
+
+/* Stack insets on small screens */
+@media (max-width: 900px){
+  #lake-toba .inset-grid { grid-template-columns: 1fr; }
+}
+
+
+/* === Custom quill cursor === */
+/* Adjust these so the “tip” of the quill feels precise */
+:root { --cursor-x: 24px;  --cursor-y: 16px; }  /* hotspot from top-left of image */
+
+/* Default cursor everywhere */
+html, body {
+  cursor: url('atlaswebsitecursor.png') var(--cursor-x) var(--cursor-y), auto;
+}
+
+/* Keep the familiar pointer on clickable things (still uses your image) */
+a, button, [role="button"] {
+  cursor: url('atlaswebsitecursor.png') var(--cursor-x) var(--cursor-y), pointer;
+}
+
+/* Preserve the I-beam in text fields */
+input, textarea {
+  cursor: text;
+}
