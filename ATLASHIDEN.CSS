@@ -1415,3 +1415,54 @@ transform: translateY(-50%);
   height: auto;
   display: block;
 }
+
+
+/* ——— LAKE VOSTOK: hero + two smalls side-by-side ——— */
+#lake-vostok .case__fig .case__panel { margin-bottom: 22px; }
+
+/* The two small cards (B, C) as a neat 2-col grid */
+#lake-vostok .case__pair{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* two even columns */
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Kill any external “secondary max-width” that shrinks them */
+#lake-vostok .case__pair .case__panel.secondary{
+  max-width: none;
+}
+
+/* Card look matches the other plates */
+#lake-vostok .case__pair .case__panel{
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#lake-vostok .case__pair figure { margin: 0; }
+#lake-vostok .case__pair img{
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .96;
+}
+#lake-vostok .case__pair figcaption{
+  font-family: var(--meta);
+  font-size: 11px;
+  color: var(--gray);
+  margin-top: 6px;
+}
+
+/* Keep the hero “A” full column width */
+#lake-vostok .case__fig .case__panel:first-child figure img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Stack B above C on narrow screens */
+@media (max-width: 900px){
+  #lake-vostok .case__pair{ grid-template-columns: 1fr; }
+}
