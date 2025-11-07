@@ -1120,27 +1120,29 @@ transform: translateY(-50%);
   opacity:.98;
 }
 
-/* Dotted curve positioned to the left of the hero image */
-.gbh__dots{
-  position:absolute;
-  left: -140px;            /* adjust to tuck into the centre column */
-  top: 8%;
-  width: 260px;
-  height: 84%;
-  overflow: visible;
-  pointer-events:none;
-  opacity:.95;
+
+/* Great Blue Hole — dotted path final size and placement */
+.gbh__dots-img {
+  position: absolute;
+  left: -40px;       /* tweak horizontally */
+  top: 58%;          /* lower starting point */
+  width: 180px;      /* larger, clean size (3–4× what you had) */
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+  transform: rotate(0deg);
 }
 
-/* Responsive collapse */
-@media (max-width: 1100px){
-  .gbh__grid{ grid-template-columns: 1fr; }
-  .gbh__hero img{ max-width: 680px; margin: 0 auto; }
-  .gbh__dots{ position:absolute; left: -20px; top: 0; width: 200px; height: 70%; }
+/* Responsive adjustment */
+@media (max-width: 1100px) {
+  .gbh__dots-img {
+    left: -25px;
+    top: 60%;
+    width: 140px;
+  }
 }
-
-@media (max-width: 700px){
-  .gbh__hero img{ max-width: 94vw; }
-  .gbh__twocol{ grid-template-columns: 1fr; }
-  .gbh__dots{ display:none; } /* optional: hide dotted curve on very small screens */
+@media (max-width: 700px) {
+  .gbh__dots-img {
+    display: none;
+  }
 }
