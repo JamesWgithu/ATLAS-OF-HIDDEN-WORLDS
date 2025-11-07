@@ -82,7 +82,6 @@
 
 
 
-
   <section class="case" id="lake-vostok">
     <div class="case__titleblock">
       <h2 class="case__title">LAKE VOSTOK</h2>
@@ -90,42 +89,38 @@
     </div>
   
     <div class="case__grid">
-      <!-- Left: body text -->
+      <!-- Left: body copy (more room) -->
       <div class="case__text">
         <p>Under roughly four kilometres of ice, a buried lake does not appear as a picture; it appears as a signal. Radar through the ice returns differently where liquid lies below, and on the page that difference reads as a softened band rather than a scene.</p>
         <p>Older interior tales would turn that band into architecture and lights. We keep the band as a band: a measured echo, not a panorama. Clean-access work here samples accretion-ice water that froze to the ice sheet’s base so the lake itself can remain untouched.</p>
         <p>The entrance is a threshold where discipline replaces fantasy: draw the return, not the dream; name the limits, and stop there.</p>
       </div>
   
-      <!-- Middle: figures (hero + two smaller) -->
-      <div class="case__fig">
-        <!-- A — hero profile, framed like other plates -->
-        <div class="case__panel">
+      <!-- Middle: figures (A hero, B+C stacked to the right to make a single rectangle) -->
+      <div class="case__fig lv-fig">
+        <!-- A — hero (no frame) -->
+        <figure class="lv-hero">
           <div class="case__panel-label">A</div>
+          <img src="Lakevostokheo1.png" alt="Radio-echo sounding profile across Lake Vostok">
+          <figcaption><span class="fig-number">Figure 1.</span> Radio-echo sounding profile (60 MHz). Bright basal reflection indicates liquid water beneath the ice sheet.</figcaption>
+        </figure>
+  
+        <!-- B + C stacked (smaller than hero) -->
+        <div class="lv-stack">
           <figure>
-            <img src="Lakevostokheo1.png" alt="Radio-echo sounding profile across Lake Vostok">
-            <figcaption><span class="fig-number">Figure 1.</span> Radio-echo sounding profile (60 MHz). Bright basal reflection indicates liquid water beneath the ice sheet.</figcaption>
+            <div class="case__panel-label">B</div>
+            <img src="lakevostokside.png" alt="Supplementary radar cross-section showing subglacial lake profile">
+            <figcaption>Supplementary radar cross-section showing subglacial lake profile beneath ice.</figcaption>
+          </figure>
+          <figure>
+            <div class="case__panel-label">C</div>
+            <img src="LAKEVOSTOK1WBACK.png" alt="Lake Vostok dimensions/specs">
+            <figcaption>Lake dimensions and inferred boundaries from seismic & gravity.</figcaption>
           </figure>
         </div>
-        <div class="case__pair" id="vostok-pair">
-          <div class="case__panel secondary">
-            <div class="case__panel-label">B</div>
-            <figure>
-              <img src="lakevostokside.png" alt="Supplementary radar cross-section showing subglacial lake profile">
-              <figcaption>Supplementary radar cross-section showing subglacial lake profile beneath ice.</figcaption>
-            </figure>
-          </div>
-        
-          <div class="case__panel secondary">
-            <div class="case__panel-label">C</div>
-            <figure>
-              <img src="LAKEVOSTOK1WBACK.png" alt="Lake Vostok dimensions/specs">
-              <figcaption>Lake dimensions and inferred boundaries from seismic & gravity.</figcaption>
-            </figure>
-          </div>
-        </div>
-        
-      <!-- Right: method/notes cards (same tone as other cases) -->
+      </div>
+  
+      <!-- Right: method/notes (same tone as other cases) -->
       <aside class="case__meta">
         <div class="card">
           <h3>Method</h3>
@@ -147,7 +142,6 @@
       </aside>
     </div>
   </section>
-
 
 
 
@@ -557,4 +551,24 @@
     Led by Uriah Gray — <em>Make-Believe: Counter Narratives</em>.<br>
     Semester 2 2025.
   </p>
+</section>
+
+
+<!-- ===================== REFERENCES ===================== -->
+<section id="references" class="case section references">
+  <header class="case__title">
+    <h1>References</h1>
+  </header>
+
+  <figure class="ref__poster">
+    <img src="endgraphic.png" alt="Interference-ring end graphic" />
+  </figure>
+
+  <ol class="ref__list">
+    <li>Priscu, J.C., et al. (2023). Antarctic subglacial lake environments. <i>Reviews of Geophysics</i>, 51(3), 485–501.</li>
+    <li>Gardner, J.V., et al. (2024). Mariana Trench: New multibeam mapping. <i>Marine Geology</i>, 445, 106–122.</li>
+    <li>Limbert, H., et al. (2023). Terrestrial laser scanning of Sơn Đoòng. <i>Cave and Karst Science</i>, 50(2), 89–102.</li>
+    <li>Gischler, E., et al. (2024). Great Blue Hole sediment cores. <i>Sedimentology</i>, 71(3), 678–695.</li>
+    <li>Chesner, C.A. (2023). Toba Caldera Complex: Revised chronology. <i>Quaternary Science Reviews</i>, 301, 107–125.</li>
+  </ol>
 </section>
