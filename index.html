@@ -89,6 +89,7 @@
       <h2 class="case__title">LAKE VOSTOK</h2>
       <span class="case__subtitle">ANTARCTICA</span>
     </div>
+
   
     <div class="case__grid">
       <div class="case__text">
@@ -105,13 +106,16 @@
             <figcaption><span class="fig-number">Figure 1.</span> Radio-echo sounding profile (60 MHz). Bright basal reflection indicates liquid water beneath the ice sheet.</figcaption>
           </figure>
         </div>
-        <div class="case__panel">
+
+
+        <div class="case__panel noframe">
           <div class="case__panel-label">B</div>
           <figure>
             <img src="LAKEVOSTOK1WBACK.png" alt="Lake Vostok dimensions/specs">
             <figcaption>Lake dimensions and inferred boundaries from seismic & gravity.</figcaption>
           </figure>
         </div>
+
         <div class="case__panel">
           <div class="case__panel-label">C</div>
           <figure>
@@ -173,41 +177,36 @@
 
 
 
-
-
-
-
   <section class="case" id="mariana-trench">
     <div class="case__titleblock">
       <h2 class="case__title">MARIANA TRENCH</h2>
       <span class="case__subtitle">WESTERN PACIFIC</span>
     </div>
   
-    <div class="case__grid">
-      <div class="case__text">
-        <p>The deepest ocean is mapped in narrow strips as ships pass with multibeam sonar. Between those strips lie interpolated values that complete the surface for the eye.</p>
-        <p>Older interior pages hid such stitches to preserve the illusion of total knowledge. We put the stitches back. Tracklines can be shown; gaps can be admitted; numbers can carry their uncertainty.</p>
-        <p>Authority comes not from pretending the surface is whole, but from revealing how coverage is made and where it thins.</p>
-      </div>
-  
-      <div class="case__fig">
-        <div class="case__panel">
+    <div class="mt-wrap">
+      <!-- LEFT: big hero + smaller panel (no frames) -->
+      <div class="mt-fig">
+        <figure class="case__panel hero noframe">
           <div class="case__panel-label">A</div>
-          <figure>
-            <img src="MarinaTrenchBathymetryBack.png" alt="Multibeam bathymetry with ship tracklines">
-            <figcaption><span class="fig-number">Figure 2.</span> Multibeam bathymetry with tracklines visible. Dark strips = measured; pale spans = interpolated.</figcaption>
-          </figure>
-        </div>
-        <div class="case__panel">
+          <img src="MarinaTrenchBathymetryBack.png" alt="Multibeam bathymetry with ship tracklines">
+          <figcaption><span class="fig-number">Figure 2.</span> Multibeam bathymetry with tracklines visible. Dark strips = measured; pale spans = interpolated.</figcaption>
+        </figure>
+  
+        <figure class="case__panel noframe">
           <div class="case__panel-label">B</div>
-          <figure>
-            <img src="marinatrench101.png" alt="Depth profile across Challenger Deep">
-            <figcaption>Cross-section including uncertainty band (±40 m at depth).</figcaption>
-          </figure>
-        </div>
+          <img src="marinatrench101.png" alt="Depth profile across Challenger Deep">
+          <figcaption>Cross-section including uncertainty band (±40 m at depth).</figcaption>
+        </figure>
       </div>
   
-      <aside class="case__meta">
+      <!-- RIGHT: text + cards (like Sơn Đoòng/Toba) -->
+      <aside class="mt-side">
+        <div class="text">
+          <p>The deepest ocean is mapped in narrow strips as ships pass with multibeam sonar. Between those strips lie interpolated values that complete the surface for the eye.</p>
+          <p>Older interior pages hid such stitches to preserve the illusion of total knowledge. We put the stitches back. Tracklines can be shown; gaps can be admitted; numbers can carry their uncertainty.</p>
+          <p>Authority comes not from pretending the surface is whole, but from revealing how coverage is made and where it thins.</p>
+        </div>
+  
         <div class="card">
           <h3>Method</h3>
           <p>Multibeam echo sounding (12–30 kHz); satellite altimetry fills gaps; interpolation noted.</p>
@@ -228,9 +227,6 @@
       </aside>
     </div>
   </section>
-
-
-
 
 
 
@@ -551,3 +547,13 @@
     
 </body>
 </html>
+
+
+<!-- Credits / Colophon -->
+<section class="credits">
+  <p>
+    Created for <strong>CDS3002 Future Communications</strong>.<br>
+    Led by Uriah Gray — <em>Make-Believe: Counter Narratives</em>.<br>
+    Semester 2 2025.
+  </p>
+</section>
